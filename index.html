@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Frame Handling Example</title>
+</head>
+
+<body>
+
+<h2>Main Page</h2>
+
+<iframe id="loginFrame" name="loginFrame" width="400" height="200">
+</iframe>
+
+<script>
+document.getElementById("loginFrame").srcdoc = `
+    <html>
+    <body>
+        <h3>Login Form</h3>
+
+        Username : <input type='text' id='username'><br><br>
+        Password : <input type='password' id='password'><br><br>
+
+        <button onclick="alert('Login Successful')">Login</button>
+    </body>
+    </html>
+`;
+</script>
+
+</body>
+</html>
